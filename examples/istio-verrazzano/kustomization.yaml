@@ -5,4 +5,4 @@ resources:
 - verrazzano-project.yaml
 - verrazzano-services.yaml
 - verrazzano-application.yaml
-
+- verrazzano-virtualservice.yaml

@@ -1,0 +1,14 @@
+apiVersion: clusters.verrazzano.io/v1alpha1
+kind: VerrazzanoProject
+metadata:
+  name: istio-verrazzano-project
+  namespace: verrazzano-mc
+spec:
+  template:
+    namespaces:
+      - metadata:
+          name: istio-verrazzano
+  placement:
+    clusters:
+      - name: managed
+      - name: managed2

@@ -6,3 +6,4 @@ resources:
 - verrazzano-services.yaml
 - verrazzano-application.yaml
 - verrazzano-virtualservice.yaml
+- verrazzano-gateway.yaml

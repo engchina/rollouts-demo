@@ -1,0 +1,22 @@
+apiVersion: core.oam.dev/v1alpha2
+kind: Component
+metadata:
+  name: verrazzano-gateway
+  namespace: istio-verrazzano
+spec:
+  workload:
+    apiVersion: networking.istio.io/v1alpha3
+    kind: Gateway
+    metadata:
+      name: istio-rollout-gateway
+      namespace: istio-verrazzano
+    spec:
+      selector:
+        istio: ingressgateway
+      servers:
+      - port:
+          number: 80
+          name: http
+          protocol: HTTP
+        hosts:
+        - "*"

@@ -1,0 +1,19 @@
+apiVersion: clusters.verrazzano.io/v1alpha1
+kind: MultiClusterApplicationConfiguration
+metadata:
+  name: argo-rollouts-appconf
+  namespace: istio-verrazzano
+spec:
+  template:
+    metadata:
+      annotations:
+        version: v1.0.0
+        description: "argo rollouts example application"
+    spec:
+      components:
+        - componentName: istio-rollout-canary-service
+        - componentName: istio-rollout-stable-service
+  placement:
+    clusters:
+      - name: managed
+      - name: managed2

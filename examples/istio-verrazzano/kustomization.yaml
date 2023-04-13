@@ -4,4 +4,5 @@ kind: Kustomization
 resources:
 - verrazzano-project.yaml
 - verrazzano-services.yaml
+- verrazzano-application.yaml
 

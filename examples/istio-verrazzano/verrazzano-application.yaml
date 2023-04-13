@@ -15,6 +15,7 @@ spec:
         - componentName: istio-rollout-stable-service
         - componentName: verrazzano-virtualservice
         - componentName: verrazzano-gateway
+        - componentName: verrazzano-analysis
   placement:
     clusters:
       - name: managed

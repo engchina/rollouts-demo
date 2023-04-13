@@ -8,3 +8,4 @@ resources:
 - verrazzano-virtualservice.yaml
 - verrazzano-gateway.yaml
 - verrazzano-analysis.yaml
+- verrazzano-rollout.yaml

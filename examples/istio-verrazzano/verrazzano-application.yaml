@@ -16,6 +16,7 @@ spec:
         - componentName: verrazzano-virtualservice
         - componentName: verrazzano-gateway
         - componentName: verrazzano-analysis
+        - componentName: verrazzano-rollout
   placement:
     clusters:
       - name: managed

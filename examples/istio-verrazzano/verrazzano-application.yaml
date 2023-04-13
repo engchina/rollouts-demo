@@ -13,6 +13,7 @@ spec:
       components:
         - componentName: istio-rollout-canary-service
         - componentName: istio-rollout-stable-service
+        - componentName: verrazzano-virtualservice
   placement:
     clusters:
       - name: managed

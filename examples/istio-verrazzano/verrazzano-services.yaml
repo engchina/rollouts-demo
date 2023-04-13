@@ -1,0 +1,39 @@
+apiVersion: core.oam.dev/v1alpha2
+kind: Component
+metadata:
+  name: istio-rollout-canary-service
+  namespace: istio-verrazzano
+spec:
+  workload:
+    apiVersion: v1
+    kind: Service
+    metadata:
+      name: istio-rollout-canary
+    spec:
+      ports:
+      - port: 80
+        targetPort: http
+        protocol: TCP
+        name: http
+      selector:
+        app: istio-rollout
+---
+apiVersion: core.oam.dev/v1alpha2
+kind: Component
+metadata:
+  name: istio-rollout-stable-service
+  namespace: istio-verrazzano
+spec:
+  workload:
+    apiVersion: v1
+    kind: Service
+    metadata:
+      name: istio-rollout-stable
+    spec:
+      ports:
+      - port: 80
+        targetPort: http
+        protocol: TCP
+        name: http
+      selector:
+        app: istio-rollout
